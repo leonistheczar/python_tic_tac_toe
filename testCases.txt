@@ -1,0 +1,12 @@
+1. Board Representation
+2. Player turn handling
+3. Win Condition Checking
+4. Draw Condition
+
+# Functions
+board()
+print_board()
+check_winner()
+check_draw()
+make_move()
+play_game()
