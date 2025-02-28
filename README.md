@@ -1,6 +1,6 @@
 ### **Project: Tic-Tac-Toe (User vs Computer) with Minimax AI**  
 
-This is a **console-based Tic-Tac-Toe game** where a human player competes against an AI-powered computer opponent. The game uses the **Minimax algorithm with Alpha-Beta pruning** to ensure the AI always makes the best possible move.  
+This is a **GUI & Console-based Tic-Tac-Toe game** where a human player competes against an AI-powered computer opponent. The game uses the **Minimax algorithm with Alpha-Beta pruning** to ensure the AI always makes the best possible move.  
 
 #### **Features:**  
 - Play against an **intelligent computer opponent**.  
