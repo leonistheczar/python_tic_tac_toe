@@ -28,7 +28,7 @@ CIRCLE_COLOR = (0, 0, 255)
 CROSS_COLOR = (255, 0, 0)
 TEXT_COLOR = (0, 0, 0)
 BUTTON_COLOR = (26, 232, 177)
-OVERLAY_COLOR = (0, 0, 0, 225)  # Semi-transparent black (RGBA)
+OVERLAY_COLOR = (0, 0, 0, 225)
 
 # Screen
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -38,7 +38,7 @@ screen.fill(WHITE)
 
 # Board
 board = ["-" for _ in range(9)]
-player = "X"  # User is "X", AI is "O"
+player = "X"
 
 # Draw Grid
 def draw_grid():
@@ -152,10 +152,10 @@ def show_overlay_text(message, y_offset, color):
     screen.blit(text, text_rect)
 
     pygame.display.update()
-    time.sleep(3)  # Show the overlay and text for 3 seconds
-    screen.fill(WHITE)  # Clear the screen
-    draw_grid()  # BLUEraw the grid
-    draw_reset_button()  # BLUEraw the reset button
+    time.sleep(3) 
+    screen.fill(WHITE)  
+    draw_grid()  
+    draw_reset_button()  
     pygame.display.update()
 
 # Draw Text
@@ -200,9 +200,9 @@ while run:
                     else:
                         # Switch to AI's turn
                         player = "O"
-                        draw_markers()  # Update the screen to show the user's move
+                        draw_markers() 
                         pygame.display.update()
-                        time.sleep(1)  # Add a 1-second delay before the AI moves
+                        time.sleep(1) 
                         ai_move = computer_move()  # AI makes a move
                         if ai_move is not None:
                             board[ai_move] = "O"
