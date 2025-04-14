@@ -1,10 +1,3 @@
-# Tic Tac Game Console Based Game (User vs Computer)
-import random
-# Welcome
-print("-------------------------------------------")
-print("Welcome to Tic Tac Toe Game")
-print("-------------------------------------------")
-
 # Board Representation
 board = ["-" for i in range(9)]     # List creation for board
 # Print Board
@@ -97,13 +90,13 @@ def minimax(board, depth, is_maximizing, alpha = -float('inf'), beta = float('in
                 score = minimax(board, depth + 1, True, alpha, beta)  # Maximize for the AI
                 board[i] = "-"  
                 best_score = min(score, best_score)  
-                beta = min(beta, best_score)  # Update beta
+                beta = min(beta, best_score) 
                 if beta <= alpha:  # Alpha cutoff
                     break   
         return best_score
     
 def computer_input():
-    best_score = -float('inf')  # Start with the lowest possible score
+    best_score = float('inf')  # Start with the lowest possible score
     best_move = None
     
     for i in range(9):
@@ -111,7 +104,7 @@ def computer_input():
             board[i] = "O"  
             score = minimax(board, 0, False)  
             board[i] = "-"  
-            if score > best_score:  
+            if score < best_score:  
                 best_score = score
                 best_move = i
     return best_move  
